@@ -15,7 +15,15 @@
 	$a = true; $b = false;
 	var_dump($a && $b); // false var_dump($a || $b); // true
 
+	// $z = $x and $y;
+
 	// Bitwise Operators (& | ^ ~ << >>)
+
+	// &
+	$x = 6; $y = 3; var_dump($x & $y); // 2
+	$x = 6; $y = 3; var_dump($x | $y); // 7
+	$x = 6; $y = 3; var_dump($x << $y); // 48 
+	$x = 6; $y = 3; var_dump($x >> $y); // 0
 
 	// Array Operators (+ == === != <> !==)
 
