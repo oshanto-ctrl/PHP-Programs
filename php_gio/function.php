@@ -1,6 +1,6 @@
 <?php 
 	
-	/* Function */
+	/* Functions */
 
 	function fooBar(/*Parameters*/) {
 		echo "Hello World\n";
