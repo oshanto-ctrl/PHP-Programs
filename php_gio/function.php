@@ -60,8 +60,24 @@
 	echo "\n\n";
 	var_dump(returnInt());
 
-	/* Typehint multiple types in one function */
+	/* 
 
+		# Typehint multiple types in one function 
+		
+		? mark before typing in function return type.
+		function f(): ?int {
+	
+		} This function will expect int and NULL (If null occured)
+
+		Using mixed typehint where we can expect any
+		return types. Do not need to use ? before mixed.
+		It's NULL type included.
+
+		We can use function f(): mixed {
+			
+		}
+	*/
+ 	
 	function fooRe(): int|float {
 		return 1.5;
 	}
@@ -69,6 +85,7 @@
 
 	echo "\n\n";
 	var_dump(fooRe());
+
 
 
  ?>
