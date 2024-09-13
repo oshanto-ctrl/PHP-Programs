@@ -124,7 +124,7 @@
 
 	// Unpack the assoc. array and send it.
 	// It will result in 1
-	$arr = ['x' => 1, 'y' => 2];
+	$arr = ['x' => 1, 'y' => 2]; // ['y' => 2, 'x' => 1] will the same.
 	var_dump(namedArg(...$arr)); 
 
  ?>
