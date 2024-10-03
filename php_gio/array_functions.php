@@ -179,8 +179,44 @@
 	echo "\nMerged Array: ";
 	print_r($merged_array);
 
-	
+	/* array_reduce() */
+
+	// array_reduce(array $array, callable $callback, mixed $initial = null): mixed
+
+	/* 
+		array_reduce — Iteratively reduce the array to a single value using a callback function
+	*/	
+
+	$invoiceItems = [
+
+		['price' => 9.99, 'qty' => 3, 'desc' => 'Item 1'],
+		['price' => 29.99, 'qty' => 1, 'desc' => 'Item 2'],
+		['price' => 149, 'qty' => 1, 'desc' => 'Item 3'],
+		['price' => 14.99, 'qty' => 2, 'desc' => 'Item 4'],
+		['price' => 4.99, 'qty' => 4, 'desc' => 'Item 5'],
+
+	];
+
+	// get the total number of price * qty
+
+	$total = array_reduce($invoiceItems,
+		fn ($sum, $item) => $sum + $item['qty'] * $item['price'],
+	 );
+
+	echo "\nTotal price with array_reduce: ";
+	print_r($total);
 
 
+	/* array_search() */
+
+	// array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
+
+	$haystack = ['a', 'b', 'c', 'D', 'E', 'ab', 'bc', 'cd', 'b', 'd'];
+
+	$needle = 'a'; // if 'b' it will take the first occurence.
+
+	$search = array_search($needle, $haystack); 
+	echo "\nArray Search: ";
+	print_r($search);
 
  ?>
