@@ -163,4 +163,24 @@
 
 	print_r($mapArr);
 
+	
+	/* array_merge() */
+
+	// array_merge(array ...$arrays): array
+
+	/* 
+
+	*/
+
+	$array1 = [1, 2, 3]; $array2 = [4, 5, 6]; $array3 = [7, 8, 9];
+
+	$merged_array = array_merge($array1, $array2, $array3);
+
+	echo "\nMerged Array: ";
+	print_r($merged_array);
+
+	
+
+
+
  ?>
