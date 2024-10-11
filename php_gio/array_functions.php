@@ -223,4 +223,100 @@
 
 	// Starting Soon ...
 
+	/* array_diff() */
+
+	/* 
+		difference between arrays.
+		
+		Compares the first array with the other given arrays and
+		shows the values of the first array that are not present in 
+		any other given arrays.
+
+		array_dif() only checks values (Only Vlaues)
+		array_dif_assoc() checks values with keys (Key Value Pairs)
+		array_diff_key() for the checks of only keys.
+	*/
+
+	$a1 = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => '5'];
+	$a2 = ['d' => 4, 'g' => 5, 'h' => 6, 'i' => 7, 'j' => 8];
+	$a3 = ['l' => 3, 'm' => 9, 'n' => 10];
+
+	print_r(array_diff($a1, $a2, $a3)); // 1, 2 
+
+	print_r(array_diff_assoc($a1, $a2, $a3)); // Compare as key-value pairs
+
+
+	echo "\n\n";
+
+	/* asort() */
+
+	/* 
+		Asort sort array by values.
+		Modifies the original variable as it is passed by reference.
+	*/
+
+	$aSortArray = ['d' => 3, 'b' => 1, 'c' => 4, 'a' => 2];
+
+	echo"Before Sorted by Value Sort\n"; print_r($aSortArray); 
+	asort($aSortArray);
+	echo"After Sorted by Value Sort\n"; print_r($aSortArray);
+
+
+
+	echo "\n\n";
+
+	/* ksort() */
+
+	/* 
+		ksort sorts array by keys.
+
+		Modifies the original variable as it is passed by reference.
+	*/
+	$kSortArray = ['d' => 3, 'b' => 1, 'c' => 4, 'a' => 2];
+	echo"Before Sorted by key Sort\n"; print_r($kSortArray); 
+	ksort($kSortArray);
+	echo"After Sorted by key Sort\n"; print_r($kSortArray);
+
+	echo "\n\n";
+	
+	/* usort() */
+
+	/*
+		
+		Can pass custom callback and get any way sort we want.
+
+	 */
+
+	$uSortArray = ['d' => 3, 'b' => 1, 'c' => 4, 'a' => 2];
+
+	echo"Before Sorted by u:custom Sort\n"; print_r($uSortArray); 
+	
+	/* 	
+		sapceship operator <=>
+		$a <=> $b (Ascending Sort)
+		$b <=> $a (Descending Sort)
+
+		Keys will be removed and numeric keys will be in place.
+
+	*/
+	usort($uSortArray, fn($a, $b) => $a <=> $b);
+	
+	echo"After Sorted by u:custom Sort\n"; print_r($uSortArray);
+
+	
+
+	/* Array Destruct */
+
+
+	echo"\n\n";
+
+	$dArray = [1, 2, 3, 4];
+
+	[$a, $b, $c, $d] = $dArray; // 1, 2, 3, 4
+
+	echo "$a $b $c $d\n";
+
+	// We can skip in descrution.
+
+
  ?>
