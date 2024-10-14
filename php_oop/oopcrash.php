@@ -45,21 +45,34 @@ echo "\n";
 
 // New Class
 class Subscriber extends Customer{
-	public $plan;
+	public $plan; public $balance;
 
-	public function __construct($id,$name,$email,$balance){
+	public function __construct($id,$name,$email,$balance, $plan){
 	parent::__construct($id,$name,$email,$balance);
 	$this->plan = $plan;
+	$this->balance = $balance;
 	}
 	// method
 	public function getEmail(){
 		return $this->email;
 	}
 
+	// Method get balance
+	public function getBalance(){
+		return $this->balance;
+	}
+
+	// Method get plan
+	public function getPlan(){
+		return $this->plan;
+	}
+
 }
 
 $subs = new Subscriber(1,'brad','brad@gmail.com', 22203, "Platinum");
 
-echo $subs->getEmail();
+echo $subs->getEmail(); echo "\n";
+echo $subs->getBalance(); echo "\n";
+echo $subs->getPlan(); echo "\n";
 
 ?>
